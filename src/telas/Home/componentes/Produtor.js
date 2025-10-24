@@ -9,7 +9,7 @@ const distanciaEmMetros = (distancia) => {
 
 export default function Produtor({ nome, imagem, distancia, estrelas, aoPressionar }) {
     const distanciaTexto = useMemo(
-        () => distanciaEmMetros(distancia), 
+        () => distanciaEmMetros(distancia),  
         [distancia]
     );
 

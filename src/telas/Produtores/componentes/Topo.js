@@ -1,17 +1,25 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
+import voltar from '../../../assets/voltar.png';
+import { TouchableOpacity} from 'react-native-gesture-handler';
 import logo from '../../../assets/logo.png';
 import useTextos from '../../../hooks/useTextos';
 
 export default function Topo({ melhoresProdutores }) {
   const { boasVindas, legenda, legendaMelhoresProdutores } = useTextos();
-
+  const navigation = useNavigation();
   return <>
     <View style={estilos.topo}>
       <Image source={logo} style={estilos.imagem} />
       <Text style={estilos.boasVindas}>{melhoresProdutores ? "" : boasVindas}</Text>
       <Text style={estilos.legenda}>{melhoresProdutores ? legendaMelhoresProdutores : legenda}</Text>
+      <TochableOpacity onPress={() => {
+        navigation.goBack();
+      }}
+        style={estilos.botaoVoltar}>
+          <Image source={voltar} style={estilos.imagemVoltar} />
+        </TochableOpacity>
     </View>    
   </>
 }

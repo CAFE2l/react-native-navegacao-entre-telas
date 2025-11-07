@@ -12,7 +12,7 @@ const stack = createStackNavigator();
 
 export default function appRotas(){
     return  <NavigationContainer>
-      <tab.Navigator>
+      <tab.Navigator screenOptions={{ headerShown: false }}>
         <tab.Screen name="Home" component={ProdutorRotas} />
         <tab.Screen name="Produtores" component={melhoresProdutoresRotas} />
         

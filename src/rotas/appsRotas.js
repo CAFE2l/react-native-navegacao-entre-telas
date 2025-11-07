@@ -4,6 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/telas/Home';
 import melhoresProdutores from './src/telas/Produtores/MelhoresProdutores';
+import ProdutorRotas from './produtorRotas';
+import melhoresProdutoresRotas from './melhoresProdutoresRotas';
 
 const tab = createBottomTabNavigator();
 const stack = createStackNavigator();
@@ -11,8 +13,8 @@ const stack = createStackNavigator();
 export default function appRotas(){
     return  <NavigationContainer>
       <tab.Navigator>
-        <tab.Screen name="Home" component={Home} />
-        <tab.Screen name="Produtores" component={melhoresProdutores} />
+        <tab.Screen name="Home" component={ProdutorRotas} />
+        <tab.Screen name="Produtores" component={melhoresProdutoresRotas} />
         
       </tab.Navigator>
       <melhoresProdutores/>

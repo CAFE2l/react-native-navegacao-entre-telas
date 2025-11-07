@@ -6,7 +6,6 @@ import Cesta from './Produtor/componentes/Cesta';
 import Topo from '../../componentes/Topo';
 import useTextos from '../../hooks/useTextos';
 import topo from '../../assets/produtores/topo.png';
-import Image from 'react-native/Libraries/Image/Image';
 
 
 const TopoLista = () => {
@@ -25,7 +24,8 @@ const TopoLista = () => {
 export default function Produtor() {
     const route = useRoute();
     const { tituloProdutor, tituloCestas} = useTextos();
-    const { nome,imagem, cestas} = route.params;
+
+    const { detalhes, itens, produtor } = route.params;
     const TopoLista = () => {
         return <>
             <Topo titulo={tituloProdutor} imagem={topo} altura={150}/>

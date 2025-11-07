@@ -7,7 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/telas/Home';
 import melhoresProdutores from './src/telas/Produtores/MelhoresProdutores';
 import attRotas from './src/rotas/appsRotas';
-import appRotas from './src/rotas/appsRotas';
+import appRotas from './src/rotas/appsRotas'; 
 
 const tab = createBottomTabNavigator();
 const stack = createStackNavigator();
